@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<script>
+"use strict";
+
+let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+}
+
+function amount_of_salaries (check_salaries, obj) {
+    let sum = 0;
+    if (check_salaries)  {
+        for (let key in obj) {
+            sum = sum + obj[key];
+        }
+    } 
+    alert(sum);
+}
+
+function isEmpty (obj) {
+    for (let key in obj) {
+        return true;
+    }   
+    return false;
+}
+
+amount_of_salaries (isEmpty(salaries), salaries);
+
+</script>
